@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -10,6 +13,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-poetsen: "Poetsen One";
+  --font-nationalPark: "National Park"
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +27,21 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "National Park", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@keyframes spinY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.hover\:animation-spinY:hover {
+  animation: spinY 100s linear infinite alternate;
 }
