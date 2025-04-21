@@ -1,14 +1,16 @@
 "use client"
-import React, { useState } from 'react'
-import { FaGithubAlt, FaInfo, FaInstagram } from 'react-icons/fa';
-import { FcAbout } from 'react-icons/fc';
-import { GiSoapExperiment } from 'react-icons/gi';
-import { PiReadCvLogo } from 'react-icons/pi';
-import { TfiLinkedin } from 'react-icons/tfi';
+
+import { useState } from "react"
+import { FaGithubAlt } from "react-icons/fa"
+import { PiReadCvLogo } from "react-icons/pi"
+import { TfiLinkedin } from "react-icons/tfi"
+
 
 export default function Planets() {
-    const [animateId, setAnimateId] = useState<'github' | 'linkedin' | 'cv' | 'insta' | '' | null>(null);
-    console.log('here');
+    let stars = []
+    for (let i = 0; i < 300; i++) {
+
+    }
 
     return (
         <svg className='m-auto'
@@ -16,27 +18,6 @@ export default function Planets() {
             viewBox="0 0 200 150"
             xmlns="http://www.w3.org/2000/svg">
             <defs>
-
-                <radialGradient id="grad1" cx="50%" cy="50%" r="50%" >
-                    <stop offset="50%" stopColor='#731d7c' />
-                    <stop offset="100%" stopColor='#341142' />
-                </radialGradient>
-                <radialGradient id="grad2" cx="50%" cy="50%" r="50%" >
-                    <stop offset="50%" stopColor='#40788f' />
-                    <stop offset="100%" stopColor='#341142' />
-                </radialGradient>
-                <radialGradient id="grad3" cx="50%" cy="50%" r="50%" >
-                    <stop offset="0%" stopColor='#3CF3FF' />
-                    <stop offset="20%" stopColor='#3CF3FF' />
-                    <stop offset="100%" stopColor='#341142' />
-                </radialGradient>
-
-
-                <radialGradient id="gradSky" cx="50%" cy="50%" r="50%" >
-                    <stop offset="0%" stopColor='#3CF3FF' />
-                    <stop offset="20%" stopColor='#3CF3FF' />
-                    <stop offset="100%" stopColor='#341142' />
-                </radialGradient>
 
                 <radialGradient id="radialGradient" cx="25%" cy="25%" r="75%">
                     <stop offset="0%" stopColor="#3CF3FF" />
@@ -68,6 +49,13 @@ export default function Planets() {
                     <stop offset="10%" stopColor="#3CF3FF" />
                     <stop offset="80%" stopColor="#FA00FF" />
                 </linearGradient>
+
+                <radialGradient id="sphere" cx="35%" cy="35%" r="70%">
+                    <stop offset="0%" stopColor="#4cafc6" />
+                    <stop offset="80%" stopColor="#43708b" />
+                    <stop offset="95%" stopColor="#3e1149" />
+                    <stop offset="100%" stopColor="#251139" />
+                </radialGradient>
             </defs>
 
             <g transform="translate(29 66)">
@@ -96,6 +84,7 @@ export default function Planets() {
                     stroke="#c23dc8"
                     strokeWidth=".5" />
             </g>
+
             <g transform="rotate(50), translate(-5, 10)">
                 <path d="M 80,10 A 70,70 0 0,0 150,80"
                     fill="none"
@@ -103,66 +92,70 @@ export default function Planets() {
                     strokeWidth=".5" />
             </g>
 
-            <g className='cursor-pointer' transform='translate(75,40)'
-                onMouseEnter={() => setAnimateId('github')}
-                onMouseLeave={() => setAnimateId(null)}
-            >
-                <circle cx="10" cy="10" r="10" fill='#420f4b' />
-                <circle cx="10" cy="10" r="10" fill='url(#grad1)'>
-                    {animateId === 'github' && <animate attributeName="opacity" values="1; 0; 1" dur="1.5s" repeatCount="indefinite" />}
+            <g transform='translate(70,35)'
+                className="cursor-pointer">
+                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        from="0 15 15"
+                        to="360 15 15"
+                        dur="3s"
+                        repeatCount="indefinite" />
                 </circle>
-                <g transform='translate(5,5)'>
-                    <PiReadCvLogo className='text-cyan-200 text-[10px]' />
-                </g>
             </g>
-            <g className='cursor-pointer' transform='translate(125,60)'
-                onMouseEnter={() => setAnimateId('insta')}
-                onMouseLeave={() => setAnimateId(null)}
-            >
-                <circle cx="10" cy="10" r="10" fill='#6880b2' />
-                <circle cx="10" cy="10" r="10" fill='url(#gradSky)'>
-                    {animateId === 'insta' && <animate attributeName="opacity" values="1; 0; 1" dur="1.5s" repeatCount="indefinite" />}
+            <g transform='translate(130,70)' className="cursor-pointer">
+                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        from="0 15 15"
+                        to="360 15 15"
+                        dur="3s"
+                        repeatCount="indefinite"
+                    />
                 </circle>
-                <g transform='translate(5,5)'>
-                    <FaGithubAlt className='text-[#181717] text-[10px]' />
-                </g>
             </g>
-            <g className='cursor-pointer' transform='translate(145,100)'
-                onMouseEnter={() => setAnimateId('')}
-                onMouseLeave={() => setAnimateId(null)}
-            >
-                <circle cx="10" cy="10" r="10" fill='#6880b2' />
-                <circle cx="10" cy="10" r="10" fill='url(#gradSky)'>
-                    {animateId === '' && <animate attributeName="opacity" values="1; 0; 1" dur="1.5s" repeatCount="indefinite" />}
+            <g transform='translate(140,110)'
+                className="cursor-pointer">
+                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        from="0 15 15"
+                        to="360 15 15"
+                        dur="3s"
+                        repeatCount="indefinite" />
                 </circle>
-                <g transform='translate(7,6)'>
-                    <TfiLinkedin className='text-[#0A66C2] text-[7px]' />
-                </g>
             </g>
 
-            <g className='cursor-pointer' transform='translate(20,60)'
-                onMouseEnter={() => setAnimateId('linkedin')}
-                onMouseLeave={() => setAnimateId(null)}
-            >
-                <circle cx="10" cy="10" r="10" fill='#420f4b' />
-                <circle cx="10" cy="10" r="10" fill='url(#grad1)'>
-                    {animateId === 'linkedin' && <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />}
+            {/* left side */}
+            <g transform='translate(12,60)'>
+                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        from="0 15 15"
+                        to="360 15 15"
+                        dur="3s"
+                        repeatCount="indefinite" />
                 </circle>
-                <g transform='translate(5,5)'>
-                    <GiSoapExperiment className='text-cyan-100 text-[10px]' />
-                </g>
             </g>
-            <g className='cursor-pointer' transform='translate(0,130)'
-                onMouseEnter={() => setAnimateId('cv')}
-                onMouseLeave={() => setAnimateId(null)}
-            >
-                <circle cx="10" cy="10" r="10" fill='#420f4b' />
-                <circle cx="10" cy="10" r="10" fill='url(#grad1)'>
-                    {animateId === 'cv' && <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />}
+            <g transform='translate(-2,133)'>
+                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        from="0 15 15"
+                        to="360 15 15"
+                        dur="3s"
+                        repeatCount="indefinite" />
                 </circle>
-                <g transform='translate(6,6)'>
-                    <FaInfo className='text-[#17A2B8] text-[7px]' />
-                </g>
             </g>
         </svg>
     )

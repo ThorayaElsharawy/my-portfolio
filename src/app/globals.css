@@ -33,15 +33,60 @@ body {
 }
 
 
-@keyframes spinY {
+/* .earth-wrapper {
+  perspective: 800px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.earth {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #cce7ff, #003366);
+  animation: spin 2s linear infinite;
+  transform-style: preserve-3d;
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.2); 
+}
+
+@keyframes spin {
   0% {
-    transform: rotateY(0deg);
+    transform: translateY(0);
   }
   100% {
+    transform: translateY(360deg);
+  }
+} */
+
+
+.earth {
+
+  animation: rotate 10s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
     transform: rotateY(360deg);
   }
 }
 
-.hover\:animation-spinY:hover {
-  animation: spinY 100s linear infinite alternate;
+.rotate-group {
+  animation: spin 4s linear infinite;
+  transform-origin: 15px 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) translate(75px, 35px);
+  }
+  100% {
+    transform: rotate(360deg) translate(75px, 35px);
+  }
 }
