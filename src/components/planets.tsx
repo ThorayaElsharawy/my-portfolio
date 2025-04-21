@@ -1,17 +1,4 @@
-"use client"
-
-import { useState } from "react"
-import { FaGithubAlt } from "react-icons/fa"
-import { PiReadCvLogo } from "react-icons/pi"
-import { TfiLinkedin } from "react-icons/tfi"
-
-
 export default function Planets() {
-    let stars = []
-    for (let i = 0; i < 300; i++) {
-
-    }
-
     return (
         <svg className='m-auto'
             width="100%" height="100%"
@@ -113,7 +100,7 @@ export default function Planets() {
                         type="rotate"
                         from="0 15 15"
                         to="360 15 15"
-                        dur="3s"
+                        dur="2s"
                         repeatCount="indefinite"
                     />
                 </circle>
@@ -127,7 +114,7 @@ export default function Planets() {
                         type="rotate"
                         from="0 15 15"
                         to="360 15 15"
-                        dur="3s"
+                        dur="2.4s"
                         repeatCount="indefinite" />
                 </circle>
             </g>
@@ -141,7 +128,7 @@ export default function Planets() {
                         type="rotate"
                         from="0 15 15"
                         to="360 15 15"
-                        dur="3s"
+                        dur="2.7s"
                         repeatCount="indefinite" />
                 </circle>
             </g>
