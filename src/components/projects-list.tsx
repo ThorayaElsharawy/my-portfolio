@@ -1,6 +1,8 @@
 import React from 'react'
 import keyrush from '@/public/images/KeyRush.png'
 import brainwave from '@/public/images/brainwave.png'
+import shopping from '@/public/images/shopping.png'
+import rmtDev from '@/public/images/rmtDev.png'
 
 import Image from "next/image";
 
@@ -16,8 +18,24 @@ const PROJECTS = [
     {
         id: 2,
         title: 'BrainWave',
-        tools: ['HTML','Tailwindcss','React'],
+        tools: ['HTML & CSS', 'Tailwindcss', 'React'],
         img: brainwave,
+        des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
+    },
+    {
+        id: 3,
+        title: 'Shopping App',
+        tools: ['React', 'Redux', 'Tailwindcss'],
+        img: shopping,
+        des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
+    },
+    {
+        id: 4,
+        title: 'rmtDev',
+        tools: ['React', 'Typescript', 'Tailwindcss'],
+        img: rmtDev,
         des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
     }

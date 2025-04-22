@@ -5,6 +5,7 @@ import Stars from "@/components/stars";
 import { PiReadCvLogo } from "react-icons/pi";
 import { FaGithubAlt } from "react-icons/fa";
 import { TfiLinkedin } from "react-icons/tfi";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -33,18 +34,25 @@ export default function Home() {
           </div>
           <div>
             <ul className="uppercase text-white space-y-6">
-              <li className="flex items-center gap-4 cursor-pointer group max-w-min">
-                <div className="w-[80px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/40 to-[#FA00FF]/40 group-hover:w-[80px]" />
-                <span className="text-sm font-semibold text-violet-200">About</span>
+              <li>
+                <Link href='/about' className="flex items-center gap-4 cursor-pointer group max-w-min">
+                  <span className="w-[80px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] inline-block" />
+                  <span className="text-sm font-semibold text-violet-200">About</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-4 cursor-pointer group max-w-min">
-                <div className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/40 to-[#FA00FF]/40 group-hover:w-[80px] transition-all duration-500" />
-                <span className="text-sm font-semibold text-violet-200">Experience</span>
+              <li>
+                <Link  href='/about' className="flex items-center gap-4 cursor-pointer group max-w-min">
+                  <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] transition-all duration-500 inline-block" />
+                  <span className="text-sm font-semibold text-violet-200">Experience</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-4 cursor-pointer group max-w-min">
-                <div className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/40 to-[#FA00FF]/40 group-hover:w-[80px] transition-all duration-500" />
-                <span className="text-sm font-semibold text-violet-200">projects</span>
+              <li>
+                <Link  href='/about' className="flex items-center gap-4 cursor-pointer group max-w-min">
+                  <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] transition-all duration-500 inline-block" />
+                  <span className="text-sm font-semibold text-violet-200">projects</span>
+                </Link>
               </li>
+
             </ul>
           </div>
           <div className="flex items-center gap-10 text-white mt-auto">
