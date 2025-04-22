@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -19,74 +19,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a; */
+    /* --foreground: #ededed; */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "National Park", sans-serif;
+  /* background: var(--background); */
+  /* color: var(--foreground); */
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 
-/* .earth-wrapper {
-  perspective: 800px;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.earth {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, #cce7ff, #003366);
-  animation: spin 2s linear infinite;
-  transform-style: preserve-3d;
-  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.2); 
-}
-
-@keyframes spin {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(360deg);
-  }
-} */
-
-
-.earth {
-
-  animation: rotate 10s linear infinite;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
-
-@keyframes rotate {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-.rotate-group {
-  animation: spin 4s linear infinite;
-  transform-origin: 15px 15px;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) translate(75px, 35px);
-  }
-  100% {
-    transform: rotate(360deg) translate(75px, 35px);
-  }
-}

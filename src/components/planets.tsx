@@ -1,149 +1,58 @@
+'use client'
+import React, { useEffect, useState } from 'react'
+import { MouseParallax } from 'react-just-parallax';
+
 export default function Planets() {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
     return (
-        <svg className='m-auto'
-            width="100%" height="100%"
-            viewBox="0 0 200 150"
-            xmlns="http://www.w3.org/2000/svg">
-            <defs>
-
-                <radialGradient id="radialGradient" cx="25%" cy="25%" r="75%">
-                    <stop offset="0%" stopColor="#3CF3FF" />
-                    <stop offset="100%" stopColor="#FA00FF" />
-                </radialGradient>
-                <filter id="dropShadow" r="-50%" x="-50%" y="-50%" width="200%" height="200%">
-                    <feDropShadow
-                        dx="0"
-                        dy="0"
-                        stdDeviation="5"
-                        floodColor="#89d3e3"
-                        floodOpacity="0.3"
-                    />
-                </filter>
-                <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feComponentTransfer in="SourceAlpha">
-                        <feFuncA type="table" tableValues="1 0" />
-                    </feComponentTransfer>
-                    <feGaussianBlur stdDeviation="10" result="blur" />
-                    <feOffset dx="0" dy="0" result="offsetBlur" />
-                    <feFlood floodColor="black" result="color" />
-                    <feComposite in2="offsetBlur" operator="in" />
-                    <feComposite in2="SourceAlpha" operator="in" />
-                    <feComposite operator="over" />
-                </filter>
-
-                <linearGradient id='moonGradient' x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3CF3FF" />
-                    <stop offset="10%" stopColor="#3CF3FF" />
-                    <stop offset="80%" stopColor="#FA00FF" />
-                </linearGradient>
-
-                <radialGradient id="sphere" cx="35%" cy="35%" r="70%">
-                    <stop offset="0%" stopColor="#4cafc6" />
-                    <stop offset="80%" stopColor="#43708b" />
-                    <stop offset="95%" stopColor="#3e1149" />
-                    <stop offset="100%" stopColor="#251139" />
-                </radialGradient>
-            </defs>
-
-            <g transform="translate(29 66)">
-                <circle
-                    cx="55"
-                    cy="55"
-                    r="55"
-                    fill="url(#radialGradient)"
-                    filter="url(#dropShadow)"
+        <MouseParallax>
+            <div className="absolute top-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[46deg]">
+                <div
+                    className={`w-2 h-2 -ml-1 -mt-36 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
                 />
-                <circle cx="55" cy="55" r="55" fill="url(#moonGradient)" filter="url(#glow)" opacity={.9}>
-                    <animate attributeName="opacity" values="1; 0; 1" dur="2s" repeatCount="indefinite" />
-                </circle>
-                <circle
-                    cx="55"
-                    cy="55"
-                    r="55"
-                    fill="black"
-                    filter="url(#innerShadow)"
-                    opacity={.8}
+            </div>
+
+            <div className="absolute top-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[56deg]">
+                <div
+                    className={`w-3 h-3 -ml-1 -mt-32 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
                 />
-            </g>
-            <g transform="translate(5 40)">
-                <path d="M 80,10 A 70,70 0 0,1 150,80"
-                    fill="none"
-                    stroke="#c23dc8"
-                    strokeWidth=".5" />
-            </g>
+            </div>
 
-            <g transform="rotate(50), translate(-5, 10)">
-                <path d="M 80,10 A 70,70 0 0,0 150,80"
-                    fill="none"
-                    stroke="#c23dc8"
-                    strokeWidth=".5" />
-            </g>
+            <div className="absolute top-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[54deg]">
+                <div
+                    className={`hidden w-4 h-4 -ml-1 mt-[12.9rem] bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full xl:block transit transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+                />
+            </div>
 
-            <g transform='translate(70,35)'
-                className="cursor-pointer">
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="3s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g>
-            <g transform='translate(130,70)' className="cursor-pointer">
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="2s"
-                        repeatCount="indefinite"
-                    />
-                </circle>
-            </g>
-            <g transform='translate(140,110)'
-                className="cursor-pointer">
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="2.4s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g>
+            <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[54deg]">
+                <div
+                    className={`hidden w-4 h-4 -ml-1 mt-[12.9rem] bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full xl:block transit transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+                />
+            </div>
 
-            {/* left side */}
-            <g transform='translate(12,60)'>
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="2.7s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g>
-            <g transform='translate(-2,133)'>
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="3s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g>
-        </svg>
+            <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[65deg]">
+                <div
+                    className={`w-8 h-8  -ml-1.5 mt-52 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+                />
+            </div>
+
+            <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[85deg]">
+                <div
+                    className={`w-6 h-6 -ml-3 -mt-3 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                        }`}
+                />
+            </div>
+
+            <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[70deg]">
+                <div
+                    className={`w-6 h-6 -ml-3 -mt-3 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                        }`}
+                />
+            </div>
+        </MouseParallax>
     )
 }
