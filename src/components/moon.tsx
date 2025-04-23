@@ -1,11 +1,10 @@
 export default function Moon() {
     return (
-        <svg className='m-auto'
+        <svg className='m-auto w-full h-full'
             width="100%" height="100%"
             viewBox="0 0 200 150"
             xmlns="http://www.w3.org/2000/svg">
             <defs>
-
                 <radialGradient id="radialGradient" cx="25%" cy="25%" r="75%">
                     <stop offset="0%" stopColor="#3CF3FF" />
                     <stop offset="100%" stopColor="#FA00FF" />
@@ -100,85 +99,3 @@ export default function Moon() {
         </svg>
     )
 }
-
-
-
-{/* <g transform="translate(5 40)">
-                <path d="M 80,10 A 70,70 0 0,1 150,80"
-                    fill="none"
-                    stroke="#c23dc8"
-                    strokeWidth=".5" />
-            </g> */}
-{/* 
-            <g transform="rotate(50), translate(-5, 10)">
-                <path d="M 80,10 A 70,70 0 0,0 150,80"
-                    fill="none"
-                    stroke="#c23dc8"
-                    strokeWidth=".5" />
-            </g> */}
-
-{/* <g transform='translate(70,35)'
-                className="cursor-pointer">
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="3s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g> */}
-{/* <g transform='translate(130,70)' className="cursor-pointer">
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="2s"
-                        repeatCount="indefinite"
-                    />
-                </circle>
-            </g> */}
-{/* <g transform='translate(140,110)'
-                className="cursor-pointer">
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="2.4s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g> */}
-
-{/* left side */ }
-{/* <g transform='translate(12,60)'>
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="2.7s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g> */}
-{/* <g transform='translate(-2,133)'>
-                <circle cx="15" cy="15" r="10" fill="url(#sphere)">
-                    <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        from="0 15 15"
-                        to="360 15 15"
-                        dur="3s"
-                        repeatCount="indefinite" />
-                </circle>
-            </g> */}

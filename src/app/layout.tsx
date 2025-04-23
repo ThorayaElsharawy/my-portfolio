@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Stars from "@/components/stars";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30`}
       >
-        {children}
+
+        <div className="relative">
+          <Stars />
+          {children}
+        </div>
 
       </body>
     </html>

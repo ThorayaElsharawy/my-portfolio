@@ -101,6 +101,6 @@ export default function Stars() {
     }, [])
 
     return (
-        <canvas ref={canvasRef} className='absolute -z-10 h-screen w-screen' />
+        <canvas ref={canvasRef} className='absolute -z-10 w-full h-full' />
     )
 }
