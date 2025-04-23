@@ -48,15 +48,21 @@ export default function Home() {
             </ul>
           </div>
           <div className="flex items-center gap-10 text-white mt-auto mb-20">
-            <PiReadCvLogo className="text-[35px] cursor-pointer hover:text-cyan-600 transition-all" />
-            <FaGithubAlt className="text-[30px] cursor-pointer hover:text-cyan-600 transition-all" />
-            <TfiLinkedin className="text-[28px] cursor-pointer hover:text-cyan-600 transition-all" />
+            <a href="https://drive.google.com/file/d/1xI0qS9_Myg073HUt3FKcmilSoVsDw5_Y/view" target="_blank">
+              <PiReadCvLogo className="text-[35px] cursor-pointer hover:text-cyan-600 transition-all" />
+            </a>
+            <Link href='https://www.linkedin.com/in/thorayaelsharawy/' target="_blanck" >
+              <TfiLinkedin className="text-[28px] cursor-pointer hover:text-cyan-600 transition-all" />
+            </Link>
+            <Link href='https://github.com/ThorayaElsharawy' target="_blanck">
+              <FaGithubAlt className="text-[30px] cursor-pointer hover:text-cyan-600 transition-all" />
+            </Link>
           </div>
         </div>
         <div className="flex-1 top-0 lg:relative m-auto sticky h-screen">
           <Moon />
           <div className="absolute top-0 -left-15 w-full h-full">
-          <Planets />
+            <Planets />
           </div>
         </div>
       </main>
