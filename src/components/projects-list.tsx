@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import keyrush from '@/public/images/KeyRush.png'
 import brainwave from '@/public/images/brainwave.png'
 import shopping from '@/public/images/shopping.png'
@@ -42,23 +42,16 @@ const PROJECTS = [
 ]
 
 export default function ProjectsList() {
-    useEffect(() => {
-        // Wait for the DOM to load, then scroll to hash if it exists
-        const hash = window.location.hash;
-        if (hash) {
-            const el = document.querySelector(hash);
-            if (el) {
-                setTimeout(() => {
-                    el.scrollIntoView({ behavior: 'smooth' });
-                }, 100); // slight delay ensures it's rendered
-            }
-        }
-    }, []);
+    const [active, setActive] = useState<number | null>(null)
     return (
         <div id='projects'>
             {PROJECTS.map((project) => {
                 return (
-                    <div key={project.id} className="mb-5 lg:flex items-start gap-4 text-white hover:bg-white/5 p-5 transition-all cursor-pointer rounded-lg group hover:shadow-[0_0_5px_#3e124778]">
+                    <div key={project.id}
+                        onMouseEnter={() => setActive(project.id)}
+                        onMouseLeave={() => setActive(null)}
+
+                        className={`mb-5 lg:flex items-start gap-4 text-white hover:bg-white/5 p-5 transition-all duration-300 cursor-pointer rounded-lg group hover:shadow-[0_0_5px_#3e124778]  ${active === null ? 'opacity-100' : active !== project.id && 'opacity-40'}`}>
                         <div className="w-[400px]">
                             <Image src={project.img} width={200} height={200} alt="keyrush" className="w-[200px] h-auto rounded-xs shadow-[0_0_5px_#8f7793] group-hover:shadow-[0_0_5px_#f5b7ffbf] transition-all" />
                         </div>
