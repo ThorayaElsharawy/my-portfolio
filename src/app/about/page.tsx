@@ -23,7 +23,9 @@ export default function page() {
                 <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 ">
 
                     <div className=" m-auto flex flex-col justify-center text-white">
-                        <h1 className="text-[60px] font-bold mb-8 font-poetsen">Thoraya Adel</h1>
+                        <Link href='/'>
+                            <h1 className="text-[60px] font-bold mb-8 font-poetsen">Thoraya Adel</h1>
+                        </Link>
                         <div className="flex items-center gap-2 h-full relative">
                             <div className="flex-1 space-y-3 ms-5 text-violet-200">
                                 <p className="font-bold">Front End Engineer</p>
@@ -46,13 +48,13 @@ export default function page() {
                         <section className="mt-40">
                             <div className="flex items-center gap-10 text-white mt-auto mb-20">
                                 <Link href="https://drive.google.com/file/d/1xI0qS9_Myg073HUt3FKcmilSoVsDw5_Y/view" target="_blank">
-                                    <PiReadCvLogo className="text-[35px] cursor-pointer hover:text-cyan-600 transition-all" />
+                                    <PiReadCvLogo className="text-[25px] cursor-pointer hover:text-cyan-600 transition-all" />
                                 </Link>
                                 <Link href='https://www.linkedin.com/in/thorayaelsharawy/' target="_blank">
-                                    <TfiLinkedin className="text-[28px] cursor-pointer hover:text-cyan-600 transition-all" />
+                                    <TfiLinkedin className="text-[25px] cursor-pointer hover:text-cyan-600 transition-all" />
                                 </Link>
                                 <Link href='https://github.com/ThorayaElsharawy' target="_blank">
-                                    <FaGithubAlt className="text-[30px] cursor-pointer hover:text-cyan-600 transition-all" />
+                                    <FaGithubAlt className="text-[25px] cursor-pointer hover:text-cyan-600 transition-all" />
                                 </Link>
                             </div>
                         </section>

@@ -50,12 +50,11 @@ export default function ProjectsList() {
                     <div key={project.id}
                         onMouseEnter={() => setActive(project.id)}
                         onMouseLeave={() => setActive(null)}
-
-                        className={`mb-5 lg:flex items-start gap-4 text-white hover:bg-white/5 p-5 transition-all duration-300 cursor-pointer rounded-lg group hover:shadow-[0_0_5px_#3e124778]  ${active === null ? 'opacity-100' : active !== project.id && 'opacity-40'}`}>
-                        <div className="w-[400px]">
+                        className={`mb-5 md:flex items-start gap-4 text-white hover:bg-white/5 p-5 transition-all duration-300 cursor-pointer rounded-lg group hover:shadow-[0_0_5px_#3e124778]  ${active === null ? 'opacity-100' : active !== project.id && 'opacity-40'}`}>
+                        <div className="w-[400px] min-w-[150px]">
                             <Image src={project.img} width={200} height={200} alt="keyrush" className="w-[200px] h-auto rounded-xs shadow-[0_0_5px_#8f7793] group-hover:shadow-[0_0_5px_#f5b7ffbf] transition-all" />
                         </div>
-                        <div className="mt-5 lg:mt-0">
+                        <div className="mt-5 md:mt-0">
                             <h3 className="font-bold text-lg">{project.title}</h3>
                             <p className="text-sm mt-2 text-violet-200 leading-5 ">{project.des}</p>
                             <div className="flex flex-wrap mt-2 gap-2">
