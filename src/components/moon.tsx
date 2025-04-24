@@ -9,6 +9,26 @@ export default function Moon() {
                     <stop offset="0%" stopColor="#3CF3FF" />
                     <stop offset="100%" stopColor="#FA00FF" />
                 </radialGradient>
+                <radialGradient id="planet1" cx="25%" cy="25%" r="75%">
+                    <stop offset="0%" stopColor="#DD734F" />
+                    <stop offset="100%" stopColor="#1A1A32" />
+                </radialGradient>
+                <radialGradient id="planet2" cx="25%" cy="25%" r="75%">
+                    <stop offset="0%" stopColor="#B9AEDF" />
+                    <stop offset="100%" stopColor="#1A1A32" />
+                </radialGradient>
+                <radialGradient id="planet3" cx="25%" cy="25%" r="75%">
+                    <stop offset="0%" stopColor="#88E5BE" />
+                    <stop offset="100%" stopColor="#1A1A32" />
+                </radialGradient>
+                <radialGradient id="planet4" cx="25%" cy="25%" r="75%">
+                    <stop offset="0%" stopColor="#3CF3FF" />
+                    <stop offset="100%" stopColor="#1A1A32" />
+                </radialGradient>
+                <radialGradient id="planet5" cx="25%" cy="25%" r="75%">
+                    <stop offset="0%" stopColor="#FA00FF" />
+                    <stop offset="100%" stopColor="#1A1A32" />
+                </radialGradient>
                 <filter id="dropShadow" r="-50%" x="-50%" y="-50%" width="200%" height="200%">
                     <feDropShadow
                         dx="0"
@@ -95,6 +115,12 @@ export default function Moon() {
                     filter="url(#innerShadow)"
                     opacity={.6}
                 />
+                <circle cx='100' cy='123' r="5" fill="url(#planet1)" />
+                <circle cx='50' cy='117' r="3" fill="url(#planet3)" />
+                <circle cx='23' cy='80' r="7" fill="url(#planet2)" />
+                <circle cx='170' cy='123' r="5" fill="url(#planet4)" />
+                <circle cx='140' cy='63' r="2" fill="url(#planet5)" />
+
             </g>
         </svg>
     )

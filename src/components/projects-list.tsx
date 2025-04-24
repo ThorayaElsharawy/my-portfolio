@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import keyrush from '@/public/images/KeyRush.png'
 import brainwave from '@/public/images/brainwave.png'
 import shopping from '@/public/images/shopping.png'
@@ -9,9 +9,9 @@ import Image from "next/image";
 const PROJECTS = [
     {
         id: 1,
-        title: 'KeyRush',
-        tools: ['HTML', 'CSS', 'Javascript'],
-        img: keyrush,
+        title: 'Shopping App',
+        tools: ['React', 'Redux', 'Tailwindcss', 'Typescript', 'REST APIs'],
+        img: shopping,
         des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
     },
@@ -25,9 +25,9 @@ const PROJECTS = [
     },
     {
         id: 3,
-        title: 'Shopping App',
-        tools: ['React', 'Redux', 'Tailwindcss'],
-        img: shopping,
+        title: 'KeyRush',
+        tools: ['HTML', 'CSS', 'Javascript'],
+        img: keyrush,
         des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
     },
@@ -42,8 +42,20 @@ const PROJECTS = [
 ]
 
 export default function ProjectsList() {
+    useEffect(() => {
+        // Wait for the DOM to load, then scroll to hash if it exists
+        const hash = window.location.hash;
+        if (hash) {
+          const el = document.querySelector(hash);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'smooth' });
+            }, 100); // slight delay ensures it's rendered
+          }
+        }
+      }, []);
     return (
-        <div>
+        <div id='projects'>
             {PROJECTS.map((project) => {
                 return (
                     <div key={project.id} className="mb-5 lg:flex items-start gap-4 text-white hover:bg-white/5 p-5 transition-all cursor-pointer rounded-lg group hover:shadow-[0_0_5px_#3e124778]">
@@ -53,7 +65,7 @@ export default function ProjectsList() {
                         <div className="mt-5 lg:mt-0">
                             <h3 className="font-bold text-lg">{project.title}</h3>
                             <p className="text-sm mt-2 text-violet-200 leading-5 ">{project.des}</p>
-                            <div className="flex mt-2 gap-2">
+                            <div className="flex flex-wrap mt-2 gap-2">
                                 {project.tools.map((tool, i) => (
                                     <div key={i} className="rounded-full px-3 py-0.5 text-xs leading-5 bg-fuchsia-500/20 text-fuchsia-300">{tool}</div>
                                 ))}

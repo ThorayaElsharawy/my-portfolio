@@ -1,12 +1,22 @@
-import Stars from "@/components/stars";
+"use client"
 import { PiReadCvLogo } from "react-icons/pi";
 import { FaGithubAlt } from "react-icons/fa";
 import { TfiLinkedin } from "react-icons/tfi";
 import ProjectsList from "@/components/projects-list";
 import ExperiencesList from "@/components/experiences-list";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function page() {
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            const el = document.querySelector(hash);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, []);
     return (
         <div className="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-16 lg:py-0 ">
             <main className="lg:flex lg:justify-between lg:gap-4">
