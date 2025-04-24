@@ -34,14 +34,14 @@ export default function Home() {
               </li>
               <li>
                 <Link href='/about/#experiences' className="flex items-center gap-4 cursor-pointer group max-w-min">
-                  <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] transition-all duration-500 inline-block" />
-                  <span className="text-sm font-semibold text-violet-200">Experience</span>
+                  <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] transition-all inline-block" />
+                  <span className="text-sm font-semibold text-white/40 group-hover:text-violet-200">Experience</span>
                 </Link>
               </li>
               <li>
                 <Link href='/about/#projects' className="flex items-center gap-4 cursor-pointer group max-w-min">
-                  <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] transition-all duration-500 inline-block" />
-                  <span className="text-sm font-semibold text-violet-200">projects</span>
+                  <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] transition-all inline-block" />
+                  <span className="text-sm font-semibold text-white/40 group-hover:text-violet-200">projects</span>
                 </Link>
               </li>
 

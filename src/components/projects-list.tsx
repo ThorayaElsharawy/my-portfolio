@@ -12,32 +12,32 @@ const PROJECTS = [
         title: 'Shopping App',
         tools: ['React', 'Redux', 'Tailwindcss', 'Typescript', 'REST APIs'],
         img: shopping,
-        des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
+        des: `Shopping App is your go-to destination for all things electronics. Explore the latest gadgets, filter by category to find exactly what you need, and easily add items to your cart. With a smooth and simple shopping experience, 
+        getting your favorite tech has never been easier.`,
     },
     {
         id: 2,
         title: 'BrainWave',
         tools: ['HTML & CSS', 'Tailwindcss', 'React'],
         img: brainwave,
-        des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
+        des: `BrainWave is a sleek and responsive AI landing page designed to showcase the power of artificial intelligence. With a smooth, modern design, it offers an intuitive user experience that highlights AI's potential for business growth. Explore the future of AI through a clean, 
+        interactive layout.`,
     },
     {
         id: 3,
         title: 'KeyRush',
         tools: ['HTML', 'CSS', 'Javascript'],
         img: keyrush,
-        des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
+        des: `KeyRush is a sleek typing test app designed to make practicing fast and fun. Switch between time, word, and quote modes to challenge yourself in different ways. 
+        Improve your accuracy, track your progress, and enjoy the rhythm of typing.`,
     },
     {
         id: 4,
         title: 'rmtDev',
         tools: ['React', 'Typescript', 'Tailwindcss'],
         img: rmtDev,
-        des: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Placeat repudiandae eum eos maiores earum aspernatur omnis! Deleniti aut omnis quisquam?`,
+        des: `rmtDev is a platform built for developers seeking remote jobs. Discover hand-picked opportunities across tech roles, tailored for remote work lifestyles. Whether you're a frontend, backend, or full-stack dev, 
+        rmtDev helps you find your next job from anywhere in the world`,
     }
 ]
 
@@ -46,14 +46,14 @@ export default function ProjectsList() {
         // Wait for the DOM to load, then scroll to hash if it exists
         const hash = window.location.hash;
         if (hash) {
-          const el = document.querySelector(hash);
-          if (el) {
-            setTimeout(() => {
-              el.scrollIntoView({ behavior: 'smooth' });
-            }, 100); // slight delay ensures it's rendered
-          }
+            const el = document.querySelector(hash);
+            if (el) {
+                setTimeout(() => {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }, 100); // slight delay ensures it's rendered
+            }
         }
-      }, []);
+    }, []);
     return (
         <div id='projects'>
             {PROJECTS.map((project) => {
