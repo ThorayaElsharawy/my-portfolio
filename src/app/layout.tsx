@@ -27,10 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30`}
       >
-
-        <div className="relative">
-          {children}
-        </div>
+        {children}
 
       </body>
     </html>

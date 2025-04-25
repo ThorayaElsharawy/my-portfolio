@@ -32,12 +32,12 @@ export default function page() {
                                 <p>Passionate about writing maintainable code and continuously improving both technical and soft skills.</p>
                             </article>
                         </section>
-                        <section className="mt-40">
+                        <section className="mt-20 md:mt-40">
                            <Footer />
                         </section>
                     </div>
                 </div>
-                <div className="pt-24 lg:w-[52%] lg:py-24 space-y-28">
+                <div className="mt-0 sm:pt-24 lg:w-[52%] lg:py-24 space-y-20 sm:space-y-28">
                     <ExperiencesList />
                     <ProjectsList />
                 </div>
