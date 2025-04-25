@@ -14,7 +14,7 @@ export default function Home() {
         <main className="lg:flex lg:justify-between lg:gap-4">
           <div className="absolute z-10 h-full lg:h-auto lg:relative w-full lg:w-[30%] flex flex-col justify-between">
             <div className="text-white my-auto ">
-              <h1 className="text-[60px] font-bold font-poetsen">Thoraya Adel</h1>
+              <h1 className="text-[50px] font-bold font-poetsen">Thoraya Adel</h1>
               <div className="flex items-center gap-2 relative mt-5">
                 <div className="flex-1 space-y-3 ms-5">
                   <p className="font-bold text-xl">Front End Developer</p>
