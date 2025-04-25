@@ -22,6 +22,19 @@ const EXPERIENCES = {
 
 export default function ExperiencesList() {
     const [active, setActive] = useState<'exp1' | 'exp2' | null>(null)
+
+    useEffect(() => {
+        const hash = window.location.hash
+
+        if(hash) {
+            const sectionId = document.querySelector(hash)
+            if(sectionId) {
+                setTimeout(() => {
+                    sectionId.scrollIntoView({ behavior: 'smooth' })
+                }, 100)
+            }
+        }
+    }, [])
     return (
         <div id='experiences'>
             {Object.keys(EXPERIENCES).map((exp) => {

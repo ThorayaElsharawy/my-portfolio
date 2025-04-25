@@ -1,11 +1,11 @@
+"use client"
 import Moon from "@/components/moon";
-import Planets from "@/components/planets";
-import { PiReadCvLogo } from "react-icons/pi";
-import { FaGithubAlt } from "react-icons/fa";
-import { TfiLinkedin } from "react-icons/tfi";
 import Link from "next/link";
+import Footer from "@/components/footer";
+import { useEffect } from "react";
 
 export default function Home() {
+
   return (
     <div className="mx-auto min-h-screen max-w-screen-2xl ps-6 md:px-12 lg:py-0 relative overflow-hidden">
       <main className="lg:flex lg:justify-between lg:gap-4">
@@ -33,31 +33,20 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link href='/about/#experiences' className="flex items-center gap-4 cursor-pointer group max-w-min">
+                <Link href='/about/#experiences' scroll={false} className="flex items-center gap-4 cursor-pointer group max-w-min">
                   <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] group-hover:from-[#3CF3FF] group-hover:to-[#FA00FF] transition-all inline-block" />
                   <span className="text-sm font-semibold text-white/40 group-hover:text-violet-200 transition-all">Experience</span>
                 </Link>
               </li>
               <li>
-                <Link href='/about/#projects' className="flex items-center gap-4 cursor-pointer group max-w-min">
+                <Link href='/about/#projects' scroll={false} className="flex items-center gap-4 cursor-pointer group max-w-min">
                   <span className="w-[30px] h-[1.5px] bg-linear-to-r from-[#3CF3FF]/60 to-[#FA00FF]/60 group-hover:w-[80px] group-hover:from-[#3CF3FF] group-hover:to-[#FA00FF] transition-all inline-block" />
                   <span className="text-sm font-semibold text-white/40 group-hover:text-violet-200 transition-all">projects</span>
                 </Link>
               </li>
-
             </ul>
           </div>
-          <div className="flex items-center gap-10 text-white mt-auto mb-20">
-            <Link href="https://drive.google.com/file/d/1xI0qS9_Myg073HUt3FKcmilSoVsDw5_Y/view" target="_blank">
-              <PiReadCvLogo className="text-[35px] cursor-pointer hover:text-cyan-600 transition-all" />
-            </Link>
-            <Link href='https://www.linkedin.com/in/thorayaelsharawy/' target="_blanck" >
-              <TfiLinkedin className="text-[28px] cursor-pointer hover:text-cyan-600 transition-all" />
-            </Link>
-            <Link href='https://github.com/ThorayaElsharawy' target="_blanck">
-              <FaGithubAlt className="text-[30px] cursor-pointer hover:text-cyan-600 transition-all" />
-            </Link>
-          </div>
+          <Footer />
         </div>
         <div className="flex-1 top-0 lg:relative m-auto sticky h-screen">
           <Moon />

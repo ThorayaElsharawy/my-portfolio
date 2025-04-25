@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import keyrush from '@/public/images/KeyRush.png'
 import brainwave from '@/public/images/brainwave.png'
@@ -43,8 +44,20 @@ const PROJECTS = [
 
 export default function ProjectsList() {
     const [active, setActive] = useState<number | null>(null)
+    useEffect(() => {
+        const hash = window.location.hash
+
+        if (hash) {
+            const sectionId = document.querySelector(hash)
+            if (sectionId) {
+                setTimeout(() => {
+                    sectionId.scrollIntoView({ behavior: 'smooth' })
+                }, 100)
+            }
+        }
+    }, []);
     return (
-        <div id='projects'>
+        <div id='projects' className='scroll-mt-24'>
             {PROJECTS.map((project) => {
                 return (
                     <div key={project.id}

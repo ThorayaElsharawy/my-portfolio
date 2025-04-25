@@ -1,22 +1,9 @@
-"use client"
-import { PiReadCvLogo } from "react-icons/pi";
-import { FaGithubAlt } from "react-icons/fa";
-import { TfiLinkedin } from "react-icons/tfi";
 import ProjectsList from "@/components/projects-list";
 import ExperiencesList from "@/components/experiences-list";
 import Link from "next/link";
-import { useEffect } from "react";
+import Footer from "@/components/footer";
 
 export default function page() {
-    useEffect(() => {
-        const hash = window.location.hash;
-        if (hash) {
-            const el = document.querySelector(hash);
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }, []);
     return (
         <div className="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-16 lg:py-0 ">
             <main className="lg:flex lg:justify-between lg:gap-4">
@@ -46,17 +33,7 @@ export default function page() {
                             </article>
                         </section>
                         <section className="mt-40">
-                            <div className="flex items-center gap-10 text-white mt-auto mb-20">
-                                <Link href="https://drive.google.com/file/d/1xI0qS9_Myg073HUt3FKcmilSoVsDw5_Y/view" target="_blank">
-                                    <PiReadCvLogo className="text-[25px] cursor-pointer hover:text-cyan-600 transition-all" />
-                                </Link>
-                                <Link href='https://www.linkedin.com/in/thorayaelsharawy/' target="_blank">
-                                    <TfiLinkedin className="text-[25px] cursor-pointer hover:text-cyan-600 transition-all" />
-                                </Link>
-                                <Link href='https://github.com/ThorayaElsharawy' target="_blank">
-                                    <FaGithubAlt className="text-[25px] cursor-pointer hover:text-cyan-600 transition-all" />
-                                </Link>
-                            </div>
+                           <Footer />
                         </section>
                     </div>
                 </div>
