@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Nunito_Sans, Poetsen_One } from 'next/font/google';
 
 import "./globals.css";
@@ -9,15 +8,6 @@ const poetsen = Poetsen_One({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-poetsen',
-});
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} antialiased bg-black bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30`}
+        className={`${nunito.variable} ${poetsen.variable} antialiased bg-black bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30`}
       >
         {children}
 
