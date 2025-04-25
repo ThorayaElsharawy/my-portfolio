@@ -2,11 +2,13 @@
 import Moon from "@/components/moon";
 import Link from "next/link";
 import Footer from "@/components/footer";
+import Stars from "@/components/stars";
 
 export default function Home() {
 
   return (
     <div className="mx-auto min-h-screen max-w-screen-2xl ps-6 md:px-12 lg:py-0 relative overflow-hidden">
+      <Stars />
       <main className="lg:flex lg:justify-between lg:gap-4">
         <div className="absolute z-10 h-full lg:h-auto lg:relative w-full lg:w-[30%] flex flex-col justify-between">
           <div className="text-white my-auto ">

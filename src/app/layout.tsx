@@ -30,7 +30,6 @@ export default function RootLayout({
       >
 
         <div className="relative">
-          <Stars />
           {children}
         </div>
 
