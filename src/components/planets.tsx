@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { MouseParallax } from 'react-just-parallax';
 
 export default function Planets() {
     const [mounted, setMounted] = useState(false);

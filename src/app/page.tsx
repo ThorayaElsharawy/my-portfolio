@@ -2,7 +2,6 @@
 import Moon from "@/components/moon";
 import Link from "next/link";
 import Footer from "@/components/footer";
-import { useEffect } from "react";
 
 export default function Home() {
 
