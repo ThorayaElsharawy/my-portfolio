@@ -37,7 +37,7 @@ export default function page() {
                         </section>
                     </div>
                 </div>
-                <div className="mt-0 sm:pt-24 lg:w-[52%] lg:py-24 space-y-20 sm:space-y-28">
+                <div className="mt-0 sm:pt-24 lg:w-[52%] lg:py-24 space-y-22 sm:space-y-28">
                     <ExperiencesList />
                     <ProjectsList />
                 </div>
