@@ -18,7 +18,7 @@ export default function Stars() {
         if (!canvas) return
 
         const ctx = canvas.getContext("2d");
-        
+
         canvas.width = window.innerWidth
         canvas.height = window.innerHeight
 
@@ -63,17 +63,21 @@ export default function Stars() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             stars.forEach(star => {
-                if(mouse.x === null || mouse.y === null) return
 
 
-                const dx = star.x - mouse.x;
-                const dy = star.y - mouse.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = star.x - mouse.x;
+                    const dy = star.y - mouse.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < mouse.radious) {
-                    const repel = (mouse.radious - distance) / mouse.radious * 10
-                    star.x += (dx / distance) * repel
-                    star.y += (dy / distance) * repel
+                    if (distance < mouse.radious) {
+                        const repel = (mouse.radious - distance) / mouse.radious * 10
+                        star.x += (dx / distance) * repel
+                        star.y += (dy / distance) * repel
+                    } else {
+                        star.x += (star.baseX - star.x) * 0.1
+                        star.y += (star.baseY - star.y) * 0.1
+                    }
                 } else {
                     star.x += (star.baseX - star.x) * 0.1
                     star.y += (star.baseY - star.y) * 0.1

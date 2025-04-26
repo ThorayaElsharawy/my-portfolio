@@ -44,7 +44,7 @@ export default function ExperiencesList() {
                     <div key={experience.id}
                         onMouseEnter={() => setActive(exp as 'exp1' | 'exp2')}
                         onMouseLeave={() => setActive(null)}
-                        className={`mb-5 p-4 lg:flex lg:items-start gap-4 text-white hover:bg-white/5 transition-all duration-300 cursor-pointer rounded-sm group ${active === null ? 'opacity-100' : active !== exp && 'opacity-40'}`}
+                        className={`mb-5 lg:p-4 lg:flex lg:items-start gap-4 text-white hover:bg-white/5 transition-all duration-300 cursor-pointer rounded-sm group ${active === null ? 'opacity-100' : active !== exp && 'opacity-40'}`}
                     >
                         <div className='md:w-[400px] md:min-w-[150px]'>
                             <h2 className='text-sm text-violet-200 font-semibold'>{experience?.date}</h2>
