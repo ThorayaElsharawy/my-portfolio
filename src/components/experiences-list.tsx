@@ -25,7 +25,6 @@ export default function ExperiencesList() {
 
     useEffect(() => {
         const hash = window.location.hash
-
         if(hash) {
             const sectionId = document.querySelector(hash)
             if(sectionId) {
@@ -35,6 +34,8 @@ export default function ExperiencesList() {
             }
         }
     }, [])
+
+    
     return (
         <div id='experiences'>
             {Object.keys(EXPERIENCES).map((exp) => {
