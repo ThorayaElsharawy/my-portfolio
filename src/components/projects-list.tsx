@@ -69,7 +69,7 @@ export default function ProjectsList() {
                         </div>
                         <div className="mt-5 md:mt-0">
                             <h3 className="font-bold text-lg">{project.title}</h3>
-                            <p className="text-sm mt-2 text-violet-200 leading-5 ">{project.des}</p>
+                            <p className="text-sm mt-2 text-violet-200/80 leading-5 ">{project.des}</p>
                             <div className="flex flex-wrap mt-2 gap-2">
                                 {project.tools.map((tool, i) => (
                                     <div key={i} className="rounded-full px-3 py-0.5 text-xs leading-5 bg-fuchsia-500/20 text-fuchsia-300">{tool}</div>

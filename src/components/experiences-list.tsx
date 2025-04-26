@@ -47,11 +47,11 @@ export default function ExperiencesList() {
                         className={`mb-5 lg:p-4 lg:flex lg:items-start gap-4 text-white hover:bg-white/5 transition-all duration-300 cursor-pointer rounded-sm group ${active === null ? 'opacity-100' : active !== exp && 'opacity-40'}`}
                     >
                         <div className='md:w-[400px] md:min-w-[150px]'>
-                            <h2 className='text-sm text-violet-200 font-semibold'>{experience?.date}</h2>
+                            <h2 className='text-sm text-violet-200/80 font-semibold'>{experience?.date}</h2>
                         </div>
                         <div className="lg:ps-20">
                             <h3 className="font-bold text-lg">{experience?.jobTitle}</h3>
-                            <p className="text-sm mt-2 text-violet-200 leading-5">
+                            <p className="text-sm mt-2 text-violet-200/80 leading-5">
                                 {experience?.desc}
                             </p>
                             <div className="flex flex-wrap mt-2 gap-2">
