@@ -36,7 +36,11 @@ export default function Stars() {
             mouse.y = e.clientY
         })
 
-
+        window.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0]
+            mouse.x = touch.clientX;
+            mouse.y = touch.clientY
+        })
 
         for (let i = 0; i < starcount; i++) {
             const x = Math.random() * canvas.width
