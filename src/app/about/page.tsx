@@ -5,7 +5,7 @@ import Link from "next/link";
 import Footer from "@/components/footer";
 import { useEffect, useRef, useState } from "react";
 
-export default function page() {
+export default function Page() {
     const aboutRef = useRef<HTMLDivElement>(null)
     const experienceRef = useRef<HTMLDivElement>(null)
     const projecteRef = useRef<HTMLDivElement>(null)
