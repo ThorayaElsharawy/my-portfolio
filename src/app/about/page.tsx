@@ -18,10 +18,10 @@ export default function page() {
                                 <p className="max-w-[300px] text-violet-200/80">Meta Front-End Developer certified, graduated with second-class honours. </p>
                             </div>
 
-                            <div className="w-[1px] h-full bg-white me-5 absolute" />
+                            <div className="w-[1px] h-full bg-[#573d63] me-5 absolute" />
                             <div className="absolute -bottom-2 -left-[6.5px]
                                 border-l-[7px] border-l-transparent
-                                border-b-[10px] border-t-white
+                                border-b-[10px] border-b-[#573d63]
                                 border-r-[7px] border-r-transparent" />
                         </div>
                         <h2 className="block lg:hidden mt-20 uppercase font-bold mb-10">About</h2>
@@ -39,11 +39,29 @@ export default function page() {
                 </div>
                 <div className="pt-5 lg:pt-24 lg:w-[52%] lg:py-24 space-y-22 sm:space-y-28">
                     <div>
-                        <h2 className="block lg:hidden uppercase font-bold text-white mb-10">Experiences</h2>
+                        <div className="flex items-center  lg:hidden mb-10 relative overflow-hidden">
+                            <h2 className=" uppercase font-bold text-white">Experiences</h2>
+                            <div className="px-4 w-full">
+                                <div className="w-full h-[1px] bg-white/20 me-5 absolute" />
+                                <div className="absolute -right-[2px] top-[8px]
+                                border-l-[7px] border-l-transparent
+                                border-b-[10px] border-b-[#573d63]
+                                border-r-[7px] border-r-transparent rotate-[270deg]" />
+                            </div>
+                        </div>
                         <ExperiencesList />
                     </div>
                     <div>
-                        <h2 className="block lg:hidden uppercase font-bold text-white mb-10">Projects</h2>
+                        <div className="flex items-center  lg:hidden mb-10 relative overflow-hidden">
+                            <h2 className=" uppercase font-bold text-white">Projects</h2>
+                            <div className="px-4 w-full">
+                                <div className="w-full h-[1px] bg-white/20 me-5 absolute" />
+                                <div className="absolute -right-[2px] top-[8px]
+                                border-l-[7px] border-l-transparent
+                                border-b-[10px] border-b-[#573d63]
+                                border-r-[7px] border-r-transparent rotate-[270deg]" />
+                            </div>
+                        </div>
                         <ProjectsList />
                     </div>
                 </div>
