@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <Stars /> */}
+      <Stars />
       <div className="mx-auto min-h-screen max-w-screen-2xl ps-6 md:px-12 lg:py-0 relative ">
         <main className="lg:flex lg:justify-between lg:gap-4 ">
 
