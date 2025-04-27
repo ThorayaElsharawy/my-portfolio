@@ -38,8 +38,6 @@ export default function Page() {
                 const isSmallScreen = window.innerWidth < 1024
                 setShowProjectNav(isInsideSection && isSmallScreen)
             }
-
-
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -48,39 +46,28 @@ export default function Page() {
     }, [])
 
     return (
-
         <>
-            <div className={`fixed z-50 top-0 w-full text-white
-                    bg-black bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30
-                    max-w-screen-2xl px-6 py-5 md:px-12 duration-100 
+            <div className={`fixed z-50 top-0 w-full max-w-screen-2xl px-6 md:px-12 py-3
+                    bg-black/70 bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30 backdrop-blur
+                    transition-transform duration-300 transform text-white
                 ${showAboutNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-                <div className=" font-semibold uppercase">About</div>
+                <div className="font-bold uppercase">About</div>
             </div>
-            <div className={`fixed z-50 top-0 w-full 
-                    bg-black bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30
+            <div className={`fixed z-50 top-0 w-full max-w-screen-2xl px-6 md:px-12 py-3
+                    bg-black/70 bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30 backdrop-blur
                     transition-transform duration-300 transform text-white
                 ${showExperienceNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-                <div className=" p-4 ps-6 font-semibold uppercase">Experiences</div>
+                <div className="font-bold uppercase">Experiences</div>
             </div>
             <div className={`fixed z-50 top-0 w-full 
-                 bg-black bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30
+                    bg-black/70 bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30 backdrop-blur
                     transition-transform duration-300 transform text-white
                 ${showProjectsNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-                <div className=" p-4 ps-6 font-semibold uppercase">Projects</div>
+                <div className="font-bold uppercase">Projects</div>
             </div>
-            {/* {showExperienceNav && (
-                <div className={`fixed z-50 top-0 w-full bg-white/20 transition-all duration-300 ${showExperienceNav ? 'translate-y-0' : '-translate-y-full'}`}>
-                    <div className="max-w-7xl mx-auto p-4 text-center font-semibold">Experiences</div>
-                </div>
-            )}
-            {showProjectsNav && (
-                <div className={`fixed z-50 top-0 w-full bg-gray-200 transition-all duration-300 ${showProjectsNav ? 'translate-y-0' : '-translate-y-full'}`}>
-                    <div className="max-w-7xl mx-auto p-4 text-center font-semibold">Projects</div>
-                </div>
-            )} */}
             <div className="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-16 lg:py-0 ">
                 <main className="lg:flex lg:justify-between lg:gap-4">
-                    <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 ">
+                    <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-18 ">
                         <div className="m-auto flex flex-col justify-center text-white">
                             <Link href='/'>
                                 <h1 className="text-[50px] lg:text-[60px] font-bold mb-8 font-poetsen">Thoraya Adel</h1>
@@ -112,7 +99,7 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                    <div className="pt-5 lg:pt-24 lg:w-[52%] lg:py-24 space-y-22 sm:space-y-28">
+                    <div className="pt-5 lg:pt-0 lg:w-[52%]  space-y-20 sm:space-y-28 lg:mt-20">
                         <div ref={experienceRef} className="">
                             <div className="flex items-center  lg:hidden mb-10 relative overflow-hidden">
                                 <h2 className="uppercase font-bold text-white">Experiences</h2>
