@@ -4,25 +4,27 @@ import keyrush from '@/public/images/KeyRush.png'
 import brainwave from '@/public/images/brainwave.png'
 import shopping from '@/public/images/shopping.png'
 import rmtDev from '@/public/images/rmtDev.png'
-
+import build from '@/public/images/under-construction.png'
 import Image from "next/image";
 
 const PROJECTS = [
     {
         id: 1,
-        title: 'Shopping App',
-        tools: ['React', 'Redux', 'Tailwindcss', 'Typescript', 'REST APIs'],
-        img: shopping,
-        des: `Shopping App is your go-to destination for all things electronics. Explore the latest gadgets, filter by category to find exactly what you need, and easily add items to your cart. With a smooth and simple shopping experience, 
-        getting your favorite tech has never been easier.`,
+        title: 'rmtDev',
+        tools: ['React', 'Typescript', 'Tailwind CSS'],
+        img: rmtDev,
+        des: `rmtDev is a platform built for developers seeking remote jobs. Discover hand-picked opportunities across tech roles, tailored for remote work lifestyles. Whether you're a frontend, backend, or full-stack dev, 
+        rmtDev helps you find your next job from anywhere in the world`,
+        underBuid: false
     },
     {
         id: 2,
-        title: 'BrainWave',
-        tools: ['HTML & CSS', 'Tailwindcss', 'React'],
-        img: brainwave,
-        des: `BrainWave is a sleek and responsive AI landing page designed to showcase the power of artificial intelligence. With a smooth, modern design, it offers an intuitive user experience that highlights AI's potential for business growth. Explore the future of AI through a clean, 
-        interactive layout.`,
+        title: 'Shopping App',
+        tools: ['React', 'Redux', 'Tailwind CSS', 'Typescript', 'REST APIs'],
+        img: shopping,
+        des: `Shopping App is your go-to destination for all things electronics. Explore the latest gadgets, filter by category to find exactly what you need, and easily add items to your cart. With a smooth and simple shopping experience, 
+        getting your favorite tech has never been easier.`,
+        underBuid: false
     },
     {
         id: 3,
@@ -31,14 +33,24 @@ const PROJECTS = [
         img: keyrush,
         des: `KeyRush is a sleek typing test app designed to make practicing fast and fun. Switch between time, word, and quote modes to challenge yourself in different ways. 
         Improve your accuracy, track your progress, and enjoy the rhythm of typing.`,
+        underBuid: false
     },
     {
         id: 4,
-        title: 'rmtDev',
-        tools: ['React', 'Typescript', 'Tailwindcss'],
-        img: rmtDev,
-        des: `rmtDev is a platform built for developers seeking remote jobs. Discover hand-picked opportunities across tech roles, tailored for remote work lifestyles. Whether you're a frontend, backend, or full-stack dev, 
-        rmtDev helps you find your next job from anywhere in the world`,
+        title: 'BrainWave',
+        tools: ['HTML & CSS', 'Tailwind CSS', 'React'],
+        img: brainwave,
+        des: `BrainWave is a sleek and responsive AI landing page designed to showcase the power of artificial intelligence. With a smooth, modern design, it offers an intuitive user experience that highlights AI's potential for business growth. Explore the future of AI through a clean, 
+        interactive layout.`,
+        underBuid: false
+    },
+    {
+        id: 5,
+        title: 'JourneyRover',
+        tools: ['Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Typescript', 'Formik'],
+        img: build,
+        des: 'Is an interactive travel platform that helps users discover global destinations and explore new cultures. With personalized recommendations and detailed guides, it makes planning your next adventure easy and exciting. Start your journey today with tailored travel insights and inspiration.',
+        underBuid: true
     }
 ]
 
@@ -58,17 +70,19 @@ export default function ProjectsList() {
     }, []);
     return (
         <div id='projects' className=''>
-            {PROJECTS.map((project) => {
+            {PROJECTS.sort((a,b) => b.id - a.id).map((project) => {
                 return (
                     <div key={project.id}
                         onMouseEnter={() => setActive(project.id)}
                         onMouseLeave={() => setActive(null)}
                         className={`mb-12 lg:mb-5 lg:p-4 md:flex items-start gap-4 text-white hover:bg-white/5  transition-all duration-300 cursor-pointer rounded-lg group hover:shadow-[0_0_5px_#3e124778]  ${active === null ? 'opacity-100' : active !== project.id && 'opacity-40'}`}>
                         <div className="md:w-[400px] md:min-w-[150px] mt-2">
-                            <Image src={project.img} width={200} height={200} alt="keyrush" className="w-[200px] h-auto rounded-xs shadow-[0_0_5px_#8f7793] group-hover:shadow-[0_0_5px_#f5b7ffbf] transition-all" />
+                            <Image src={project?.img} width={200} height={200} alt="keyrush" className="w-[200px] h-auto rounded-xs shadow-[0_0_5px_#8f7793] group-hover:shadow-[0_0_5px_#f5b7ffbf] transition-all" />
                         </div>
                         <div className="mt-5 md:mt-0">
-                            <h3 className="font-bold text-lg">{project.title}</h3>
+                            <h3 className="font-bold text-lg">{project.title} 
+                                {project.underBuid && <small className='text-xs mx-2 text-white/40'>(Under build)</small>}
+                            </h3>
                             <p className="text-sm mt-2 text-violet-200/80 leading-5 ">{project.des}</p>
                             <div className="flex flex-wrap mt-2 gap-2">
                                 {project.tools.map((tool, i) => (

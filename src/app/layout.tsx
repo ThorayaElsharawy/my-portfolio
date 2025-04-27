@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Poetsen_One } from 'next/font/google';
-
 import "./globals.css";
 
 const nunito = Nunito_Sans({ subsets: ['latin'], variable: '--font-nunito' });
