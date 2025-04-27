@@ -9,11 +9,10 @@ export default function Home() {
   return (
     <>
       <Stars />
-      <div className="mx-auto min-h-screen max-w-screen-2xl ps-6 md:px-12 lg:py-0 relative ">
-        <main className="lg:flex lg:justify-between lg:gap-4 ">
-
-          <div className="absolute z-10 w-auto h-full lg:h-auto lg:relative lg:w-[30%] flex flex-col justify-center gap-24 space-y-14">
-            <div className="text-white my-auto lg:my-0">
+      <div className="mx-auto min-h-screen max-w-screen-2xl px-6 md:px-12 py-6 lg:py-0 relative ">
+        <main className="lg:flex lg:justify-between lg:gap-4 w-auto">
+          <div className="absolute z-10 w-auto h-full lg:h-auto lg:relative lg:w-[30%] flex flex-col justify-around">
+            <div className="text-white">
               <h1 className="text-[50px] lg:text-[60px] font-bold mb-8 font-poetsen">Thoraya Adel</h1>
               <div className="flex items-center gap-2 relative mt-5">
                 <div className="flex-1 space-y-3 ms-5">
@@ -47,7 +46,7 @@ export default function Home() {
                 </Link>
               </li>
             </ul>
-            <div className="mb-24 lg:mb-0">
+            <div className="pb-20 lg:pb-0">
               <Footer />
             </div>
           </div>
