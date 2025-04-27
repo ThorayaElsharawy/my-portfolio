@@ -59,7 +59,7 @@ export default function Page() {
                 ${showExperienceNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
                 <div className="font-bold uppercase">Experiences</div>
             </div>
-            <div className={`fixed z-50 top-0 w-full 
+            <div className={`fixed z-50 top-0 w-full max-w-screen-2xl px-6 md:px-12 py-3
                     bg-black/70 bg-linear-to-r from-indigo-500/10 via-violet-500/20 to-fuchsia-500/30 backdrop-blur
                     transition-transform duration-300 transform text-white
                 ${showProjectsNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
