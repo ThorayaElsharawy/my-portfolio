@@ -11,7 +11,7 @@ export default function Home() {
       <Stars />
       <div className="mx-auto min-h-screen max-w-screen-2xl px-6 md:px-12 py-6 lg:py-0 relative ">
         <main className="lg:flex lg:justify-between lg:gap-4 w-auto">
-          <div className="absolute z-10 w-auto h-full lg:h-auto lg:relative lg:w-[30%] flex flex-col justify-around">
+          <div className="absolute z-10 w-auto h-full lg:h-auto lg:relative lg:w-[30%] flex flex-col gap-24 justify-around py-24">
             <div className="text-white">
               <h1 className="text-[50px] lg:text-[60px] font-bold mb-8 font-poetsen">Thoraya Adel</h1>
               <div className="flex items-center gap-2 relative mt-5">
@@ -46,11 +46,11 @@ export default function Home() {
                 </Link>
               </li>
             </ul>
-            <div className="pb-20 lg:pb-0">
+            <div className="">
               <Footer />
             </div>
           </div>
-          <div className="flex-1 top-0 lg:relative m-auto sticky h-screen">
+          <div className="flex-1 top-0 lg:relative m-auto sticky h-screen -mt-12 sm:mt-0">
             <Moon />
           </div>
         </main>
