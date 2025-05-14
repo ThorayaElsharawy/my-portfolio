@@ -6,7 +6,6 @@ import shopping from '@/public/images/shopping.png'
 import rmtDev from '@/public/images/rmtDev.png'
 import build from '@/public/images/under-construction.png'
 import Image from "next/image";
-import { FaArrowsLeftRight } from 'react-icons/fa6'
 import { MdArrowOutward } from 'react-icons/md'
 import Link from 'next/link'
 
