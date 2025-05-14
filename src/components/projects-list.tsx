@@ -6,6 +6,9 @@ import shopping from '@/public/images/shopping.png'
 import rmtDev from '@/public/images/rmtDev.png'
 import build from '@/public/images/under-construction.png'
 import Image from "next/image";
+import { FaArrowsLeftRight } from 'react-icons/fa6'
+import { MdArrowOutward } from 'react-icons/md'
+import Link from 'next/link'
 
 const PROJECTS = [
     {
@@ -50,7 +53,8 @@ const PROJECTS = [
         tools: ['Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Typescript', 'Formik'],
         img: build,
         des: 'Is an interactive travel platform that helps users discover global destinations and explore new cultures. With personalized recommendations and detailed guides, it makes planning your next adventure easy and exciting. Start your journey today with tailored travel insights and inspiration.',
-        underBuid: true
+        underBuid: true,
+        link: 'https://journeyrover-bg5pm19sy-thoraya-adels-projects.vercel.app/'
     }
 ]
 
@@ -70,7 +74,7 @@ export default function ProjectsList() {
     }, []);
     return (
         <div id='projects' className=''>
-            {PROJECTS.sort((a,b) => b.id - a.id).map((project) => {
+            {PROJECTS.sort((a, b) => b.id - a.id).map((project) => {
                 return (
                     <div key={project.id}
                         onMouseEnter={() => setActive(project.id)}
@@ -80,9 +84,12 @@ export default function ProjectsList() {
                             <Image src={project?.img} width={200} height={200} alt="keyrush" className="w-[200px] h-auto rounded-xs shadow-[0_0_5px_#8f7793] group-hover:shadow-[0_0_5px_#f5b7ffbf] transition-all" />
                         </div>
                         <div className="mt-5 md:mt-0">
-                            <h3 className="font-bold text-lg">{project.title} 
-                                {project.underBuid && <small className='text-xs mx-2 text-white/40'>(Under build)</small>}
-                            </h3>
+                            <div className='flex items-center gap-2'>
+                                <h3 className="font-bold text-lg">{project.title}
+                                    {project.underBuid && <small className='text-xs mx-2 text-white/40'>(Under build)</small>}
+                                </h3>
+                                {project.link && <Link href='https://journeyrover.vercel.app/' target='_blank'><MdArrowOutward className='group-hover:ms-2 duration-200' /></Link>}
+                            </div>
                             <p className="text-sm mt-2 text-violet-200/80 leading-5 ">{project.des}</p>
                             <div className="flex flex-wrap mt-2 gap-2">
                                 {project.tools.map((tool, i) => (
