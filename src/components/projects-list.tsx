@@ -44,12 +44,13 @@ const PROJECTS = [
         img: brainwave,
         des: `BrainWave is a sleek and responsive AI landing page designed to showcase the power of artificial intelligence. With a smooth, modern design, it offers an intuitive user experience that highlights AI's potential for business growth. Explore the future of AI through a clean, 
         interactive layout.`,
-        underBuid: false
+        underBuid: false,
+        link: 'https://brainwave-six-beta.vercel.app/'
     },
     {
         id: 5,
         title: 'JourneyRover',
-        tools: ['Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Typescript', 'Formik'],
+        tools: ['Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Typescript', 'Framer Motion'],
         img: build,
         des: 'Is an interactive travel platform that helps users discover global destinations and explore new cultures. With personalized recommendations and detailed guides, it makes planning your next adventure easy and exciting. Start your journey today with tailored travel insights and inspiration.',
         underBuid: true,
@@ -87,7 +88,7 @@ export default function ProjectsList() {
                                 <h3 className="font-bold text-lg">{project.title}
                                     {project.underBuid && <small className='text-xs mx-2 text-white/40'>(Under build)</small>}
                                 </h3>
-                                {project.link && <Link href='https://journeyrover.vercel.app/' target='_blank'><MdArrowOutward className='group-hover:ms-2 duration-200' /></Link>}
+                                {project.link && <Link href={project.link} target='_blank'><MdArrowOutward className='group-hover:ms-2 duration-200' /></Link>}
                             </div>
                             <p className="text-sm mt-2 text-violet-200/80 leading-5 ">{project.des}</p>
                             <div className="flex flex-wrap mt-2 gap-2">
