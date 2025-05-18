@@ -54,7 +54,8 @@ const PROJECTS = [
         img: build,
         des: 'Is an interactive travel platform that helps users discover global destinations and explore new cultures. With personalized recommendations and detailed guides, it makes planning your next adventure easy and exciting. Start your journey today with tailored travel insights and inspiration.',
         underBuid: true,
-        link: 'https://journeyrover-bg5pm19sy-thoraya-adels-projects.vercel.app/'
+        link: 'https://journeyrover-dpceilg04-thoraya-adels-projects.vercel.app/'
+
     }
 ]
 
