@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="flex items-center gap-10 text-white">
-            <Link href="https://drive.google.com/file/d/1mW07xAWRaTBs1JYUd-KPSF6zpZt4Jfae/view?usp=sharing" target="_blank">
+            <Link href="https://drive.google.com/file/d/1hEl480lVSUF6NHYrqA3l0exk50lC2SrB/view?usp=sharing" target="_blank">
                 <PiReadCvLogo className="text-[25px] cursor-pointer hover:text-cyan-600 transition-all" />
             </Link>
             <Link href='https://www.linkedin.com/in/thorayaelsharawy/' target="_blank">
