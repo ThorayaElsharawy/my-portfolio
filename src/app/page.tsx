@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Stars />
-      <div className="mx-auto min-h-screen max-w-screen-2xl px-6 md:px-12 py-6 lg:py-0 relative ">
+      <div className="mx-auto h-[100dvh] max-w-screen-2xl px-6 md:px-12 py-6 lg:py-0 relative ">
         <main className="lg:flex lg:justify-between lg:gap-4 w-auto">
           <div className="absolute z-10 w-auto h-full lg:h-auto lg:relative lg:w-[30%] flex flex-col gap-24 justify-around py-24">
             <div className="text-white">
